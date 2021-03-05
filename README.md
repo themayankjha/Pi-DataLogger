@@ -22,6 +22,7 @@ $ git clone https://github.com/themayankjha/RaspberryPi-WebBased-DataLogger.git
 $ cd RaspberryPi-WebBased-DataLogger
 $ cd bin
 $ pip install -r requirements.txt
+$ python sensor.py&
 $ gunicorn __init__:app -b localhost:8081
 ```
 Open your web browser and goto :- https://localhost:8081/
