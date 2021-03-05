@@ -1,8 +1,8 @@
 ## Raspberry Pi Web-Server based Data Logger and Graph Plotter
 ---
 #### Overview
-Built for Raspberry Pi in Python.
-
+Built for Raspberry Pi using Python.
+All the steps mentioned below assumes that you ahave a Raspberry Pi running linux and have Python installed.
 
 ---
 #### Functionality
@@ -11,16 +11,27 @@ Built for Raspberry Pi in Python.
 - A webserver running on port 8081 displays the same PNG File so that it can be accessed by any device on local network.
 
 ---
- #### Running
+#### Usage
+ This acts as a basic wireframe to get started with connecting a sensor to Raspberry Pi, collecting data from it and modifying data such as to present in a simpler form.You can extend this code to allow multiple sensors gather and display data all at once. 
 
- ```sh
- $ git clone <Repository Name>
- $ pip install -r requirements.txt
- $ gunicorn app:__init__.py
- ```
- Open your web browser and goto :- https://localhost:8081/
+---
+#### Running
+
+```sh
+$ git clone https://github.com/themayankjha/RaspberryPi-WebBased-DataLogger.git
+$ cd RaspberryPi-WebBased-DataLogger
+$ cd bin
+$ pip install -r requirements.txt
+$ gunicorn __init__:app -b localhost:8081
+```
+Open your web browser and goto :- https://localhost:8081/
+
+![Screenshot](screenshot/screenshot.png?raw=true "screenshot")
 
  ---
- #### Copyright
+#### Copyright
+
 Copyright (c) 2021 [Mayank Jha](https://github.com/themayankjha)
 License - [MIT](License.md)
+
+---

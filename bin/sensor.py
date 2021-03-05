@@ -2,8 +2,10 @@
 import RPi.GPIO as GPIO
 import time
 import datetime
+
 #GlobalVariables
 passedtime=0
+
 #GPIO Mode (BOARD / BCM)
 GPIO.setmode(GPIO.BCM)
  
@@ -46,7 +48,7 @@ def log():
     currentDT = datetime.datetime.now()
     print (currentDT.strftime("%Y-%m-%d %H:%M:%S"))
     passedtime=0
-    f=open("sensor1.txt", "a+") 
+    f=open("sensor.txt", "a+") 
     f.write(currentDT.strftime("%H.%M\n")) 
     f.close 
  
@@ -61,7 +63,7 @@ if __name__ == '__main__':
                 passedtime = passedtime+1
                 if dist > 35 :
                     passedtime=0
-                    break;
+                    break
                 if passedtime==10 :
                     log()
             time.sleep(1)
